@@ -1,0 +1,10 @@
+{
+  "env": {
+    "FAUNA_SECRET": "@fauna-key"
+  },
+  "build": {
+    "env": {
+      "FAUNA_SECRET": "@fauna-key"
+    }
+  }
+}

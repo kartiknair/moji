@@ -21,6 +21,10 @@ class Home extends Component {
   handleSubmit(e) {
     e.preventDefault();
     if (validUrl.isUri(this.state.urlValue) && this.state.aliasValue) {
+      this.setState({
+        feedback: `Loading...`,
+        feedbackColor: "black",
+      });
       client
         .query(
           q.Create(q.Collection("aliases"), {
@@ -72,6 +76,11 @@ class Home extends Component {
       <div className="container">
         <Head>
           <title>👋👉</title>
+          <meta
+            name="description"
+            content="👋👉 is a delightfully
+            simple URL shortener for emoji lovers."
+          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
@@ -81,7 +90,7 @@ class Home extends Component {
             <a href="https://👋👉.ml">https://👋👉.ml</a> is a delightfully
             simple URL shortener for emoji lovers. It's free and{" "}
             <a href="https://github.com/kartiknair/moji">open-source</a> and
-            leverages FaunaDB &amp; Next.js for fast and reliable URLs
+            leverages FaunaDB &amp; Next.js for fast and reliable URLs.
           </p>
           <form onSubmit={this.handleSubmit}>
             <p>
@@ -219,7 +228,7 @@ class Home extends Component {
 
           @media (max-width: 635px) {
             main {
-              padding: 5rem 5rem 0rem 2rem;
+              padding: 3rem 2.5rem 0rem 2.5rem;
             }
 
             input[type="text"] {
