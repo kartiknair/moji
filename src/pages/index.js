@@ -98,6 +98,7 @@ class Home extends Component {
               <input
                 type="text"
                 placeholder="https://realylongurl.com/is-really-long"
+                id="url"
                 name="url"
                 onChange={(e) => this.onChange(e, "url")}
               ></input>
@@ -108,6 +109,7 @@ class Home extends Component {
               <input
                 type="text"
                 placeholder="https://👋👉.ml/<THIS_PART>"
+                id="alias"
                 name="alias"
                 onChange={(e) => this.onChange(e, "alias")}
               ></input>
